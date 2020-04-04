@@ -1,0 +1,57 @@
+{
+    "schema": {
+        "type": "struct",
+        "fields": [{
+                "type": "int32",
+                "optional": false,
+                "field": "id"
+            },
+            {
+                "type": "int32",
+                "optional": false,
+                "field": "customer_id"
+            },
+            {
+                "type": "string",
+                "optional": false,
+                "field": "street"
+            },
+            {
+                "type": "string",
+                "optional": false,
+                "field": "city"
+            },
+            {
+                "type": "string",
+                "optional": false,
+                "field": "state"
+            },
+            {
+                "type": "string",
+                "optional": false,
+                "field": "zip"
+            },
+            {
+                "type": "string",
+                "optional": false,
+                "name": "io.debezium.data.Enum",
+                "version": 1,
+                "parameters": {
+                    "allowed": "SHIPPING,BILLING,LIVING"
+                },
+                "field": "type"
+            }
+        ],
+        "optional": true,
+        "name": "dbserver1.inventory.addresses.Value"
+    },
+    "payload": {
+        "id": 10,
+        "customer_id": 1001,
+        "street": "3183 Moore Avenue",
+        "city": "Euless",
+        "state": "Texas",
+        "zip": "76036",
+        "type": "SHIPPING"
+    }
+}

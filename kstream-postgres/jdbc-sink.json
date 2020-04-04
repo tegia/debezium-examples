@@ -1,12 +1,12 @@
 {
-    "name": "jdbc-sink",
+    "name": "location-sink-service",
     "config": {
         "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
         "tasks.max": "1",
-        "table.name.format": "employee_sync",
-        "topics": "oganizer_employee",
+        "table.name.format": "services",
+        "topics": "final_ddd_aggregates",
         "dialect.name": "PostgreSqlDatabaseDialect",
-        "connection.url": "jdbc:postgresql://192.168.1.39:5437/course?user=postgres&password=89shuey27h3gf8",
+        "connection.url": "jdbc:postgresql://178.128.89.234:5437/course?user=postgres&password=89shuey27h3gf8",
         "transforms": "unwrap",
         "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
         "transforms.unwrap.drop.tombstones": "false",
@@ -14,6 +14,7 @@
         "insert.mode": "upsert",
         "delete.enabled": "true",
         "pk.fields": "id",
-        "pk.mode": "record_key"
+        "pk.mode": "record_key",
+        "schemas.enable": "false"
     }
 }

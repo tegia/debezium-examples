@@ -1,12 +1,10 @@
 {
-    "name": "jdbc-sink",
+    "name": "mysql-sink-postgres",
     "config": {
         "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
         "tasks.max": "1",
-        "table.name.format": "employee_sync",
-        "topics": "oganizer_employee",
-        "dialect.name": "PostgreSqlDatabaseDialect",
-        "connection.url": "jdbc:postgresql://192.168.1.39:5437/course?user=postgres&password=89shuey27h3gf8",
+        "topics": "category, crawl, device_setting, devices,favorites, settings",
+        "connection.url": "jdbc:postgresql://134.209.98.218:5432/test?user=postgres&password=89shuey27h3gf8",
         "transforms": "unwrap",
         "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
         "transforms.unwrap.drop.tombstones": "false",

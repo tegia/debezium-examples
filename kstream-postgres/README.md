@@ -52,12 +52,3 @@ The corresponding aggregate should be updated inMongoDB.
 ```shell
 docker-compose down
 ```
-# List topic in kafka
-bin/kafka-topics.sh --list --zookeeper zookeeper:2181
-
-# Show data in topic
-bin/kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic dbserver1.inventory.addresses --from-beginning
-
-# Delete topic
-bin/kafka-topics.sh --zookeeper zookeeper:2181 --delete --topic oganizer_location
-
